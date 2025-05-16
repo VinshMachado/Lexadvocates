@@ -1,22 +1,51 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export const Aboutus = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ x: 0, opacity: 1 });
+    }
+  }, [inView, controls]);
   return (
     <>
-      <div className="mt-40 sm:mt-0 sm:h-screen h-[700px] flex justify-center items-center flex-col">
+      <div
+        id="About"
+        className="mt-20 sm:mt-10 bg-amber-100 sm:h-[600px] h-[800px] flex justify-center items-center flex-col"
+      >
         {" "}
-        <h1 className="text-5xl poppins-medium w-full flex justify-center items-center ">
+        <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
           About Us
         </h1>
-        <div className="w-full h-auto ">
-          <p className="p-5 text-center poppins-bold ">
+        <div className="w-full h-auto  flex flex-wrap justify-center items-center">
+          <motion.div
+            ref={ref}
+            initial={{ x: -100, opacity: 0 }}
+            animate={controls}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="sm:h-[400px] h-[200px] w-11/12 md:w-1/3  relative"
+          >
+            <Image
+              src={"/court-appointed-lawyer.jpg"}
+              fill
+              alt="about"
+              className="object-center object-cover rounded-xl shadow-2xl"
+            />
+          </motion.div>
+          <div className="p-5 ml-5 sm:text-sm text-xs text-center sm:text-left noticia-text-regular w-[700px] h-[400px] ">
             {" "}
-            <p className="poppins-bold mt-5  flex justify-center items-center ">
+            <p className="poppins-bold sm:mt-5 mt-2  flex justify-center items-center border-b-2 mb-1 ">
               Welcome to Ronel Lex Advocates and Consultants
             </p>
             At{" "}
-            <b className="poppins-bold-italic text-xl">
+            <b className="noticia-text-bold text-xs  sm:text-sm ">
               Ronel Lex Advocates and Consultants{" "}
             </b>
             we are committed to providing premier legal services with a focus on
@@ -40,7 +69,7 @@ export const Aboutus = () => {
             unwavering commitment. Explore our diverse areas of practice, meet
             our team of legal experts, and learn how we can serve your legal
             needs.
-          </p>
+          </div>
         </div>
       </div>
     </>

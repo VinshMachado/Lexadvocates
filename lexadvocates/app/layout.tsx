@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,39 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {Navbar()}
         {children}
       </body>
     </html>
   );
 }
+
+let Navbar = () => {
+  return (
+    <div className="w-full h-24 flex justify-end items-center  ">
+      <div className="w-full h-10  flex justify-end items-center">
+        <a
+          className="m-3 sm:text-2xl text-md poppins-light hover:text-amber-400 hover:border-b-2"
+          href="#About"
+        >
+          <button>About</button>
+        </a>
+        <a className="m-3 sm:text-2xl w-36 sm:w-auto text-md poppins-light hover:text-amber-400 hover:border-b-2">
+          <button>Contact Us</button>
+        </a>
+        <a className="m-3 sm:text-2xl text-md poppins-light hover:text-amber-400 hover:border-b-2">
+          <button>Career</button>
+        </a>
+        <div className="w-40 h-10  ml-10 relative">
+          <Image
+            src="/envelope.png"
+            alt="LOGO"
+            width={70}
+            height={70}
+            className="object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,30 +1,43 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Heros = () => {
   return (
-    <div className="w-full sm:h-screen h-auto text-white flex flex-col sm:flex-row">
+    <div className="w-full sm:h-screen h-auto text-white flex flex-col overflow-hidden  sm:flex-row">
       {/* Left Image */}
-      <div className="relative w-full sm:w-2/3 h-[300px] sm:h-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative w-full sm:w-2/3 h-[300px] sm:h-full"
+      >
         <Image
           alt="main banner"
           fill
           src="/StockCake-Lady Justice Statue_174733083844.png"
           className="object-cover object-top-left"
         />
-      </div>
+      </motion.div>
 
       {/* Right Text */}
-      <div className="w-full sm:w-2/3 bg-white text-black p-10 flex flex-col justify-center items-start">
+      <motion.div
+        initial={{ x: 200, opacity: 0 }} // Start off-screen to the left
+        animate={{ x: 0, opacity: 1 }} // Move to original position
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="w-full sm:w-2/3 bg-white text-black p-10 flex flex-col justify-center items-start"
+      >
         <h1 className="text-4xl sm:text-6xl poppins-medium leading-tight mb-4">
-          Delivering Excellence in Legal Services
+          Delivering Excellence in{" "}
+          <p className="text-amber-400"> Legal Services</p>
         </h1>
         <p className="text-base sm:text-lg">
           "Ronel Lex Advocates and Consultants – Pioneers in legal innovation,
           <br />
           justice, and advocacy"
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
