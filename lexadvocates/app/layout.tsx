@@ -42,13 +42,13 @@ const Navbar = () => {
       <div className="w-full h-10  flex justify-end items-center">
         <Link
           href="/About"
-          className="m-3 sm:text-2xl font-bold text-md poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          className="m-3 sm:text-2xl font-bold text-sm poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           About
         </Link>
         <Link
           href="/About"
-          className="m-3 sm:text-2xl font-bold text-md poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          className="m-3 sm:text-2xl w-28 sm:w-auto  font-bold text-md poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           Contact Us
         </Link>
