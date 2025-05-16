@@ -33,9 +33,9 @@ const Heros = () => {
           <p className="text-amber-400"> Legal Services</p>
         </h1>
         <p className="text-base sm:text-lg">
-          "Ronel Lex Advocates and Consultants – Pioneers in legal innovation,
+          &quot; Lex Advocates and Consultants – Pioneers in legal innovation,
           <br />
-          justice, and advocacy"
+          justice, and advocacy&quot;
         </p>
       </motion.div>
     </div>
