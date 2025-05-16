@@ -18,7 +18,7 @@ export const Aboutus = () => {
     <>
       <div
         id="About"
-        className="mt-20 sm:mt-10 bg-amber-100 sm:h-[600px] h-[800px] flex justify-center items-center flex-col"
+        className="mt-20 sm:mt-10  sm:h-[600px] h-[800px] flex justify-center items-center flex-col"
       >
         {" "}
         <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
