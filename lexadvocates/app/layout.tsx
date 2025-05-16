@@ -38,36 +38,35 @@ export default function RootLayout({
 
 const Navbar = () => {
   return (
-    <div className="w-full h-24 flex justify-end items-center  ">
-      <div className="w-full h-10  flex justify-end items-center">
+    <div className="w-full h-24 flex justify-end items-center px-4">
+      <div className="w-full flex justify-end items-center flex-wrap">
         <Link
           href="/About"
-          className="m-3 sm:text-2xl font-bold text-sm poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           About
         </Link>
         <Link
-          href="/About"
-          className="m-3 sm:text-2xl w-28 sm:w-auto  font-bold text-md poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          href="/Contact"
+          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           Contact Us
         </Link>
-
         <Link
-          href="/About"
-          className="m-3 sm:text-2xl font-bold text-md poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          href="/Career"
+          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           Career
         </Link>
-        <div className="w-40 h-10  ml-10 relative">
+
+        <div className="ml-4">
           <Link href="/">
-            {" "}
             <Image
               src="/envelope.png"
               alt="LOGO"
               width={70}
               height={70}
-              className="object-cover object-center"
+              className="w-10 sm:w-16 md:w-15 h-auto object-cover object-center"
             />
           </Link>
         </div>
