@@ -6,31 +6,35 @@ const History = () => {
       <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Our History
       </h2>
+
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         Founded on the pillars of integrity, excellence, and a forward-thinking
-        approach to legal practice, RONEL LEX ADVOCATES AND CONSULTANTS was
-        established with the vision of delivering unparalleled legal services to
-        clients across diverse sectors. Since its inception, our chamber has
-        been a trusted partner for individuals, businesses, and organizations
-        seeking expert legal guidance and representation.
+        approach to legal practice,&nbsp;RONEL LEX ADVOCATES AND
+        CONSULTANTS&nbsp;was established with the vision of delivering
+        unparalleled legal services to clients across diverse sectors. Since its
+        inception, our chamber has been a trusted partner for individuals,
+        businesses, and organizations seeking expert legal guidance and
+        representation.
       </p>
 
       <p className="leading-7 [&:not(:first-child)]:mt-6">
-        The law chamber was founded by Roshan Melwyn Lobo, a highly experienced
-        advocate with an extensive background in legal advisory, litigation, and
-        corporate law. Driven by a passion for justice and a commitment to
-        innovation in the legal field, Roshan Melwyn Lobo set out to build a
-        firm that combines traditional legal wisdom with the latest developments
-        in the industry.
+        The law chamber was founded by&nbsp;Roshan Melwyn Lobo, a highly
+        experienced advocate with an extensive background in legal advisory,
+        litigation, and corporate law. Driven by a passion for justice and a
+        commitment to innovation in the legal field, Roshan Melwyn Lobo set out
+        to build a firm that combines traditional legal wisdom with the latest
+        developments in the industry.
       </p>
 
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         What started as a modest practice has evolved into a full-service law
         firm, representing clients both locally and internationally. Over the
-        years, RONEL LEX ADVOCATES AND CONSULTANTS has garnered a reputation for
-        excellence in handling complex legal matters, from constitutional cases
-        to cutting-edge issues in cyber law and corporate governance.
+        years,&nbsp;RONEL LEX ADVOCATES AND CONSULTANTS&nbsp;has garnered a
+        reputation for excellence in handling complex legal matters, from
+        constitutional cases to cutting-edge issues in cyber law and corporate
+        governance.
       </p>
+
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         We pride ourselves on staying ahead of the curve, consistently updating
         our practice to align with the latest legal amendments and technological
@@ -38,6 +42,7 @@ const History = () => {
         challenges of digital privacy and data protection, our chamber is at the
         forefront of legal transformation.
       </p>
+
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         As we continue to grow, our focus remains on providing personalized
         legal solutions that address the unique needs of each client. Our team
@@ -45,24 +50,27 @@ const History = () => {
         committed to upholding the highest standards of professionalism,
         ensuring that justice is served in every case we take on.
       </p>
+
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         With a rich history of landmark case successes and a firm foundation
-        built on trust, RONEL LEX ADVOCATES AND CONSULTANTS is poised to lead
-        the future of law, offering innovative legal strategies that adapt to
-        the changing landscape of the modern world.
+        built on trust,&nbsp;RONEL LEX ADVOCATES AND CONSULTANTS&nbsp;is poised
+        to lead the future of law, offering innovative legal strategies that
+        adapt to the changing landscape of the modern world.
       </p>
 
       <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
         Legal Approach
       </h3>
+
       <p className="leading-7 [&:not(:first-child)]:mt-6">
-        At RONEL LEX ADVOCATES AND CONSULTANTS, our legal approach is rooted in
-        a client-centered philosophy, where every case is treated with
+        At&nbsp;RONEL LEX ADVOCATES AND CONSULTANTS, our legal approach is
+        rooted in a client-centered philosophy, where every case is treated with
         meticulous care and personalized attention. We believe in delivering
         solutions that are not only legally sound but also pragmatic,
-        forward-thinking, and aligned with our clients' business or personal
-        goals.
+        forward-thinking, and aligned with our clients&apos; business or
+        personal goals.
       </p>
+
       <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
         <li>
           <b>Comprehensive Legal Expertise:</b> Our team of experienced
@@ -101,11 +109,11 @@ const History = () => {
           resolutions without compromising on justice.
         </li>
         <li>
-          <b> Proactive Legal Advisory: </b>
-          Beyond litigation, we offer strategic legal advisory services, guiding
-          businesses, individuals, and institutions in regulatory compliance,
-          risk mitigation, and proactive legal planning, helping clients avoid
-          potential legal issues before they arise.
+          <b>Proactive Legal Advisory:</b> Beyond litigation, we offer strategic
+          legal advisory services, guiding businesses, individuals, and
+          institutions in regulatory compliance, risk mitigation, and proactive
+          legal planning, helping clients avoid potential legal issues before
+          they arise.
         </li>
       </ul>
     </div>
