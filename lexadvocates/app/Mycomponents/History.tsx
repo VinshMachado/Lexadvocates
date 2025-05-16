@@ -69,7 +69,7 @@ const History = () => {
   );
 };
 
-let Accord = () => {
+const Accord = () => {
   return (
     <div className="w-full  mt-5 mx-auto p-4 sm:p-8 bg-white rounded-2xl shadow-md border border-gray-200">
       <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center">
