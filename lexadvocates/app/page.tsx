@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Heros from "./Mycomponents/Heros";
 import { Aboutus } from "./Mycomponents/Aboutus";
 import History from "./Mycomponents/History";
