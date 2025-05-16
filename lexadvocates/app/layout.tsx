@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,12 +40,12 @@ const Navbar = () => {
   return (
     <div className="w-full h-24 flex justify-end items-center  ">
       <div className="w-full h-10  flex justify-end items-center">
-        <a
-          className="m-3 sm:text-2xl text-md poppins-light hover:text-amber-400 hover:border-b-2"
-          href="#About"
+        <Link
+          href="/About"
+          className="m-3 sm:text-2xl text-md poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
-          <button>About</button>
-        </a>
+          About
+        </Link>
         <a className="m-3 sm:text-2xl w-36 sm:w-auto text-md poppins-light hover:text-amber-400 hover:border-b-2">
           <button>Contact Us</button>
         </a>
@@ -52,13 +53,16 @@ const Navbar = () => {
           <button>Career</button>
         </a>
         <div className="w-40 h-10  ml-10 relative">
-          <Image
-            src="/envelope.png"
-            alt="LOGO"
-            width={70}
-            height={70}
-            className="object-cover object-center"
-          />
+          <Link href="/">
+            {" "}
+            <Image
+              src="/envelope.png"
+              alt="LOGO"
+              width={70}
+              height={70}
+              className="object-cover object-center"
+            />
+          </Link>
         </div>
       </div>
     </div>

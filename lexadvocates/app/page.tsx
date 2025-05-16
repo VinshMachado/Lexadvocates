@@ -5,8 +5,7 @@ import History from "./Mycomponents/History";
 export default function Home() {
   return (
     <>
-      <Heros /> <Aboutus />
-      <History />
+      <Heros />
     </>
   );
 }
