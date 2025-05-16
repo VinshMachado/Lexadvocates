@@ -30,7 +30,7 @@ export const Aboutus = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={controls}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="sm:h-[400px] h-[200px] w-11/12 md:w-1/3  relative"
+            className="w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 h-[180px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] relative"
           >
             <Image
               src={"/court-appointed-lawyer.jpg"}
