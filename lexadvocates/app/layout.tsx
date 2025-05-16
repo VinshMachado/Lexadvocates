@@ -35,7 +35,7 @@ export default function RootLayout({
   );
 }
 
-let Navbar = () => {
+const Navbar = () => {
   return (
     <div className="w-full h-24 flex justify-end items-center  ">
       <div className="w-full h-10  flex justify-end items-center">
