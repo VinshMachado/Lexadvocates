@@ -2,11 +2,11 @@ import React from "react";
 
 const Experties = () => {
   return (
-    <div className="overflow-x-auto mx-5 my-6">
+    <div className="overflow-x-auto mx-5 my-6 flex flex-col justify-center items-center">
       <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100 poppins-medium w-full flex justify-center items-center">
         Practice Areas
       </h1>
-      <table className="w-full border-collapse">
+      <table className="sm:w-[90%] w-full border-collapse">
         <thead>
           <tr className="border-t even:bg-muted">
             <th className="border px-4 py-2 text-left font-bold">Law Field</th>
