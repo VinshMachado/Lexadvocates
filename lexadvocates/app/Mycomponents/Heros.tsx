@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const Heros = () => {
   return (
@@ -37,6 +38,11 @@ const Heros = () => {
           <br />
           justice, and advocacy&quot;
         </p>
+        <Button className="bg-amber-400 rounded-full mt-10 h-16 hover:bg-amber-600 hover:text-white text-xl w-36">
+          <a href="https://www.youtube.com/" target="_blank">
+            Contact Us
+          </a>
+        </Button>
       </motion.div>
     </div>
   );

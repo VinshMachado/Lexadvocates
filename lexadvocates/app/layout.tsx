@@ -41,19 +41,14 @@ export default function RootLayout({
 const Navbar = () => {
   return (
     <div className="w-full h-24 flex justify-end items-center px-4">
-      <div className="w-full flex justify-end items-center flex-wrap">
+      <div className="w-full flex justify-end items-center ">
         <Link
           href="/About"
           className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           About
         </Link>
-        <Link
-          href="/Contact"
-          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
-        >
-          Contact Us
-        </Link>
+
         <Link
           href="/Career"
           className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
@@ -61,7 +56,7 @@ const Navbar = () => {
           Career
         </Link>
         <Link
-          href="/Career"
+          href="/Services"
           className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           Services
