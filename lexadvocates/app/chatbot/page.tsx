@@ -34,7 +34,7 @@ export default function Page() {
   return (
     <div
       id="BOT"
-      className=" w-[80%] m-10 sm:max-w-sm mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white"
+      className=" w-[80%] m-5 sm:max-w-sm mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white"
     >
       {/* Header */}
       <div className="bg-white border-b px-4 py-3 font-semibold text-gray-700">
