@@ -1,6 +1,6 @@
 import React from "react";
-import { Aboutus } from "../Mycomponents/Aboutus";
-import History from "../Mycomponents/History";
+import { Aboutus } from "../../Mycomponents/Aboutus";
+import History from "../../Mycomponents/History";
 
 const page = () => {
   return (

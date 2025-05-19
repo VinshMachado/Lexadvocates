@@ -1,5 +1,5 @@
 import React from "react";
-import Experties from "../Mycomponents/Experties";
+import Experties from "../../Mycomponents/Experties";
 
 const page = () => {
   return <Experties />;
