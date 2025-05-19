@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function page() {
+export default function Page() {
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Hey there 👋" },
   ]);
