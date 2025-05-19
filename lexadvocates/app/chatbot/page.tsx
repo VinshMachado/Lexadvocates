@@ -1,13 +1,12 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 export default function Page() {
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Hey there 👋" },
   ]);
   const [input, setInput] = useState("");
-  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const sendMessage = () => {
     const trimmed = input.trim();
@@ -32,10 +31,6 @@ export default function Page() {
     if (e.key === "Enter") sendMessage();
   };
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
   return (
     <div className="max-w-sm mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white">
       {/* Header */}
@@ -55,7 +50,7 @@ export default function Page() {
             <div
               className={`rounded-2xl px-4 py-2 max-w-[75%] text-sm ${
                 msg.sender === "user"
-                  ? "bg-blue-500 text-white"
+                  ? "bg-amber-500 text-white"
                   : "bg-gray-200 text-black"
               }`}
             >
@@ -63,7 +58,7 @@ export default function Page() {
             </div>
           </div>
         ))}
-        <div ref={messagesEndRef} />
+        <div />
       </div>
 
       {/* Input */}
@@ -72,12 +67,12 @@ export default function Page() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="flex-1 p-2 text-sm border rounded-full outline-none focus:ring-1 ring-blue-400"
+          className="flex-1 p-2 text-sm border rounded-full outline-none focus:ring-1 ring-amber-400"
           placeholder="Message..."
         />
         <button
           onClick={sendMessage}
-          className="bg-blue-500 text-white px-4 py-2 text-sm rounded-full hover:bg-blue-600"
+          className="bg-amber-500 text-white px-4 py-2 text-sm rounded-full hover:bg-amber-600"
         >
           Send
         </button>
