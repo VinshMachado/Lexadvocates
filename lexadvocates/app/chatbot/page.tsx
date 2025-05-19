@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Page() {
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hey there 👋" },
+    { sender: "bot", text: "Welcome to Ronel Lex advocates & consultants" },
   ]);
   const [input, setInput] = useState("");
 
@@ -32,7 +32,10 @@ export default function Page() {
   };
 
   return (
-    <div className="max-w-sm mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white">
+    <div
+      id="BOT"
+      className=" w-[80%] m-10 sm:max-w-sm mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white"
+    >
       {/* Header */}
       <div className="bg-white border-b px-4 py-3 font-semibold text-gray-700">
         AI Chat
