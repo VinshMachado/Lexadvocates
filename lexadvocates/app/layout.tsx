@@ -50,7 +50,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="/chatbot/#BOT"
+          href="/chatbot"
           className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
           Chat With Us

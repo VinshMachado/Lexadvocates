@@ -15,6 +15,7 @@ export default function Page() {
     const newMsg = { sender: "user", text: trimmed };
     setMessages((prev) => [...prev, newMsg]);
     setInput("");
+    //await thing here
 
     setTimeout(() => {
       setMessages((prev) => [
