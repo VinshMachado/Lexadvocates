@@ -1,8 +1,18 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Experties = () => {
   return (
-    <div className="overflow-x-auto mx-5 my-6 flex flex-col justify-center items-center">
+    <motion.div
+      className="overflow-x-auto mx-5 my-6 flex flex-col justify-center items-center"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        scale: { visualDuration: 0.4, bounce: 0.5 },
+      }}
+    >
       <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100 poppins-medium w-full flex justify-center items-center">
         Practice Areas
       </h1>
@@ -173,7 +183,7 @@ const Experties = () => {
           </tr>
         </tbody>
       </table>
-    </div>
+    </motion.div>
   );
 };
 
