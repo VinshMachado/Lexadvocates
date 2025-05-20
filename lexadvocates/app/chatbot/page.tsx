@@ -51,7 +51,9 @@ export default function Page() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") sendMessage(), SendAi();
+    if (e.key === "Enter") {
+      sendMessage(), SendAi();
+    }
   };
 
   // Auto-resize textarea
