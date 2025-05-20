@@ -4,6 +4,14 @@ import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../Mycomponents/Footer";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,18 +50,25 @@ const Navbar = () => {
   return (
     <div className="w-full h-24 flex justify-end items-center px-4">
       <div className="w-full flex justify-end items-center ">
-        <Link
-          href="/About"
-          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
-        >
-          About
-        </Link>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="mx-2 text-base focus:outline-none sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400">
+            About
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-white">
+            <DropdownMenuLabel>Management</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Features and updates</DropdownMenuItem>
+            <DropdownMenuItem>Knowledge Hub</DropdownMenuItem>
+            <DropdownMenuItem>Career</DropdownMenuItem>
+            <DropdownMenuItem>Position</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
 
         <Link
           href="/chatbot"
           className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
-          Chat With Us
+          Chat With AI
         </Link>
         <Link
           href="/Services"

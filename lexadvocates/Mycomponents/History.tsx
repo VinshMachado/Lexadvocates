@@ -8,7 +8,7 @@ import {
 
 const History = () => {
   return (
-    <div className="sm:m-10 m-5">
+    <div className="sm:m-10 mt-20 m-3">
       <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Our History
       </h2>
