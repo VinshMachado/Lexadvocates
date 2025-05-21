@@ -75,6 +75,7 @@ const page = () => {
           {Data.map((item) => {
             return (
               <FeaturesCard
+                key={item.title}
                 image={item.image}
                 content1={item.content1}
                 content2={item.content2}
