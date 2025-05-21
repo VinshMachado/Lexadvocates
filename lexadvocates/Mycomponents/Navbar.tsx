@@ -19,16 +19,19 @@ const Navbar = () => {
             About
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-white">
-            <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-              <Link href="/About"> About Us</Link>
-            </DropdownMenuItem>
+            <Link href="/About">
+              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
+                About Us
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
               Management
             </DropdownMenuItem>
-
-            <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-              Features and updates
-            </DropdownMenuItem>
+            <Link href="/Features">
+              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
+                Features and updates
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
               Knowledge Hub
             </DropdownMenuItem>

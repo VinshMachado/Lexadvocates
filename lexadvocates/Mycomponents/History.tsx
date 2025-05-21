@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Accordion,
@@ -5,10 +6,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { motion } from "framer-motion";
 const History = () => {
   return (
-    <div className="sm:m-10 mt-20 m-3">
+    <motion.div
+      className="sm:m-10 mt-20 m-3"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Our History
       </h2>
@@ -65,13 +72,19 @@ const History = () => {
       </p>
 
       {Accord()}
-    </div>
+    </motion.div>
   );
 };
 
 const Accord = () => {
   return (
-    <div className="w-full  mt-20 mx-auto p-4 sm:p-8 bg-white rounded-2xl shadow-md border border-gray-200">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="w-full  mt-20 mx-auto p-4 sm:p-8 bg-white rounded-2xl shadow-md border border-gray-200"
+    >
       <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center">
         Our Legal Approach
       </h2>
@@ -156,7 +169,7 @@ const Accord = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-    </div>
+    </motion.div>
   );
 };
 

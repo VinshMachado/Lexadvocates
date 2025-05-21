@@ -6,6 +6,7 @@ const Experties = () => {
   return (
     <motion.div
       className="overflow-x-auto mx-5 my-6 flex flex-col justify-center items-center"
+      style={{ transformOrigin: "top center" }}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
