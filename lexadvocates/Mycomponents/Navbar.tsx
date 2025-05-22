@@ -32,9 +32,11 @@ const Navbar = () => {
                 Features and updates
               </DropdownMenuItem>
             </Link>
-            <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-              Knowledge Hub
-            </DropdownMenuItem>
+            <Link href="/KnowledgeHub">
+              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
+                Knowledge Hub
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
               Career
             </DropdownMenuItem>
