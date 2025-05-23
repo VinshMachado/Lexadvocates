@@ -37,9 +37,11 @@ const Navbar = () => {
                 Knowledge Hub
               </DropdownMenuItem>
             </Link>
-            <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-              Career
-            </DropdownMenuItem>
+            <Link href="/career">
+              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
+                Career
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
               Position
             </DropdownMenuItem>

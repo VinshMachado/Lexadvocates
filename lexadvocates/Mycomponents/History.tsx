@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   Accordion,
@@ -6,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
+
 const History = () => {
   return (
     <div className="sm:m-10 mt-20 m-3">
