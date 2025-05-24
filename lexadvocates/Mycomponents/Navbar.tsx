@@ -42,9 +42,6 @@ const Navbar = () => {
                 Career
               </DropdownMenuItem>
             </Link>
-            <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-              Position
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
