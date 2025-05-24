@@ -115,9 +115,10 @@ const page = () => {
   return (
     <>
       <div className="w-full h-auto flex  flex-wrap">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
             <Teamcard
+              key={index}
               name={item.name}
               qualifications={item.qualifications}
               specialization={item.specializations}
