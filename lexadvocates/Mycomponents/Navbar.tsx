@@ -24,9 +24,11 @@ const Navbar = () => {
                 About Us
               </DropdownMenuItem>
             </Link>
-            <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-              Management
-            </DropdownMenuItem>
+            <Link href="/Management">
+              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
+                Management
+              </DropdownMenuItem>
+            </Link>
             <Link href="/Features">
               <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
                 Features and updates
