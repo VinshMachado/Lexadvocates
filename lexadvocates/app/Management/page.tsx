@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Teamcard = (Props: any) => {
-  let specializations: Array<string> = Props.specalizations;
+  const specializations: Array<string> = Props.specalizations;
 
   return (
     <div className="p-4 md:p-10 max-w-3xl sm:w-1/3 mx-auto">
@@ -32,7 +32,7 @@ const Teamcard = (Props: any) => {
 };
 
 const page = () => {
-  let data = [
+  const data = [
     {
       name: "Roshan Melwyn Lobo",
       designation: "Advocate",
