@@ -2,21 +2,30 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
+type TeamcardProps = {
+  name: string;
+  designation: string;
+  qualifications: string;
+  specialization: string[];
+};
 
-const Teamcard = (Props: any) => {
-  const specializations: Array<string> = Props.specalizations;
+const Teamcard = ({
+  name,
+  designation,
+  qualifications,
+  specialization,
+}: TeamcardProps) => {
+  const specializations: Array<string> = specialization;
 
   return (
     <div className="p-4 md:p-10 max-w-3xl sm:w-1/3 mx-auto">
       <Card className="rounded-2xl shadow-xl">
         <CardContent className="p-6">
-          <h1 className="text-3xl font-bold text-amber-500 mb-1">
-            {Props.name}
-          </h1>
+          <h1 className="text-3xl font-bold text-amber-500 mb-1">{name}</h1>
           <p className="text-md text-gray-700 font-medium mb-2">
-            {Props.designation}
+            {designation}
           </p>
-          <p className="text-sm text-gray-600 mb-4">{Props.qualifications}</p>
+          <p className="text-sm text-gray-600 mb-4">{qualifications}</p>
           <h2 className="text-lg font-semibold mb-2">Specializations:</h2>
           <div className="flex flex-wrap gap-2">
             {specializations.map((item: string, index: number) => (
@@ -111,7 +120,7 @@ const page = () => {
             <Teamcard
               name={item.name}
               qualifications={item.qualifications}
-              specalizations={item.specializations}
+              specialization={item.specializations}
               designation={item.designation}
             />
           );
