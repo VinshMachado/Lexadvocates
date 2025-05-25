@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import MissionVision from "./MissionVision";
 
 const History = () => {
   return (
@@ -65,6 +66,7 @@ const History = () => {
       </p>
 
       {Accord()}
+      <MissionVision />
     </div>
   );
 };

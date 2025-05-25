@@ -1,12 +1,19 @@
+"use client";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 type TeamcardProps = {
   name: string;
   designation: string;
   qualifications: string;
   specialization: string[];
+};
+type StaffProps = {
+  name: string;
+  designation: string;
+  qualifications: string;
 };
 
 const Teamcard = ({
@@ -18,7 +25,11 @@ const Teamcard = ({
   const specializations: Array<string> = specialization;
 
   return (
-    <div className="p-4 md:p-10 max-w-3xl sm:w-1/3 mx-auto">
+    <motion.div
+      style={{ transformOrigin: "top center" }}
+      whileHover={{ scale: 1.1 }}
+      className="p-4 md:p-10 max-w-3xl sm:w-1/3 mx-auto"
+    >
       <Card className="rounded-2xl shadow-xl">
         <CardContent className="p-6">
           <h1 className="text-3xl font-bold text-amber-500 mb-1">{name}</h1>
@@ -36,7 +47,27 @@ const Teamcard = ({
           </div>
         </CardContent>
       </Card>
-    </div>
+    </motion.div>
+  );
+};
+
+const StaffCard = ({ name, designation, qualifications }: StaffProps) => {
+  return (
+    <motion.div
+      style={{ transformOrigin: "top center" }}
+      whileHover={{ scale: 1.1 }}
+      className="p-4 md:p-10 w-full m-3  sm:w-1/3 mx-auto"
+    >
+      <Card className="rounded-2xl shadow-xl">
+        <CardContent className="p-6">
+          <h1 className="text-3xl font-bold text-amber-500 mb-1">{name}</h1>
+          <p className="text-md text-gray-700 font-medium mb-2">
+            {designation}
+          </p>
+          <p className="text-sm text-gray-600 mb-4">{qualifications}</p>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 
@@ -98,23 +129,19 @@ const page = () => {
         "Tax Law",
       ],
     },
-    {
-      name: "Roshan R.",
-      designation: "H.R and Accountant",
-      qualifications: "M.Com.",
-      specializations: [],
-    },
-    {
-      name: "Rishal D’Souza",
-      designation: "Paralegal",
-      qualifications: "B.B.A.(Law), LL.B.",
-      specializations: [],
-    },
   ];
 
   return (
     <>
-      <div className="w-full h-auto flex  flex-wrap">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          scale: { visualDuration: 0.4, bounce: 0.5 },
+        }}
+        className="w-full h-auto flex  flex-wrap justify-center items-center"
+      >
         {data.map((item, index) => {
           return (
             <Teamcard
@@ -126,7 +153,17 @@ const page = () => {
             />
           );
         })}
-      </div>
+        <StaffCard
+          name="Roshan R."
+          designation="H.R and Accountant"
+          qualifications="M.Com."
+        />
+        <StaffCard
+          name="Rishal D’Souza"
+          designation="Paralegal"
+          qualifications="B.B.A.(Law), LL.B."
+        />
+      </motion.div>
     </>
   );
 };

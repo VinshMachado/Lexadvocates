@@ -26,7 +26,7 @@ const Navbar = () => {
             </Link>
             <Link href="/Management">
               <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-                Management
+                Our Team
               </DropdownMenuItem>
             </Link>
             <Link href="/Features">
