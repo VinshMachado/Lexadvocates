@@ -40,9 +40,7 @@ const Heros = () => {
           justice, and advocacy&quot;
         </p>
         <Button className="bg-amber-400 rounded-full mt-10 h-16 hover:bg-amber-600 hover:text-white text-xl w-36">
-          <Link href="/Contact" target="_blank">
-            Contact Us
-          </Link>
+          <Link href="/Contact">Contact Us</Link>
         </Button>
       </motion.div>
     </div>
