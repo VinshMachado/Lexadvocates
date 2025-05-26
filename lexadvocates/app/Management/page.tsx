@@ -142,6 +142,9 @@ const page = () => {
         }}
         className="w-full h-auto flex  flex-wrap justify-center items-center"
       >
+        <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
+          Meet Our Team
+        </h1>
         {data.map((item, index) => {
           return (
             <Teamcard
