@@ -46,7 +46,9 @@ const News: React.FC = () => {
 
   return (
     <div className="news-feed w-full   p-4 flex flex-col justify-center items-center">
-      <h2 className="text-xl font-bold mb-4">Latest Legal Updates in India</h2>
+      <h2 className="sm:text-3xl text-xl font-bold mb-4 ">
+        Latest Legal Updates in India
+      </h2>
       <ul className="w-full  h-auto flex flex-wrap">
         {items.map((item) => (
           <li key={item.guid} className="mb-4 m-5">
