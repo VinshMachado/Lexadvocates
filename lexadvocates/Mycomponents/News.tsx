@@ -45,22 +45,34 @@ const News: React.FC = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="news-feed w-full max-w-3xl mx-auto p-4">
+    <div className="news-feed w-full   p-4 flex flex-col justify-center items-center">
       <h2 className="text-xl font-bold mb-4">Latest Legal Updates in India</h2>
-      <ul>
+      <ul className="w-full  h-auto flex flex-wrap">
         {items.map((item) => (
-          <li key={item.guid} className="mb-4">
+          <li key={item.guid} className="mb-4 m-5">
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
-              {item.title}
+              <div className="sm:w-72 w-[97%] h-64 bg-white rounded-2xl shadow-xl p-4 flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
+                <h3 className="text-lg font-semibold text-gray-800 line-clamp-3">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-500 mt-2">
+                  {new Date(item.pubDate).toLocaleString()}
+                </p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto text-blue-600 hover:text-blue-800 text-sm font-medium"
+                >
+                  Read more →
+                </a>
+              </div>
             </a>
-            <p className="text-sm text-gray-600">
-              {new Date(item.pubDate).toLocaleString()}
-            </p>
           </li>
         ))}
       </ul>
