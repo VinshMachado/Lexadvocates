@@ -1,8 +1,19 @@
+"use client";
 import { Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function page() {
   return (
-    <div className="p-6 sm:p-10 max-w-4xl mx-auto space-y-10">
+    <motion.div
+      style={{ transformOrigin: "top center" }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        scale: { visualDuration: 0.4, bounce: 0.5 },
+      }}
+      className="p-6 sm:p-10 max-w-4xl mx-auto space-y-10"
+    >
       <h1 className="text-3xl font-bold text-center text-amber-400">
         Contact Us
       </h1>
@@ -58,6 +69,6 @@ export default function page() {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

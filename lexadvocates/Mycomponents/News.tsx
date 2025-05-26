@@ -49,7 +49,7 @@ const News: React.FC = () => {
       <h2 className="sm:text-3xl text-xl font-bold mb-4 ">
         Latest Legal Updates in India
       </h2>
-      <ul className="w-full  h-auto flex flex-wrap">
+      <ul className="w-full  h-auto flex flex-wrap items-center justify-center">
         {items.map((item) => (
           <li key={item.guid} className="mb-4 m-5">
             <a

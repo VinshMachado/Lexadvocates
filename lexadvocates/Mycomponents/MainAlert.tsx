@@ -29,7 +29,7 @@ the information about us is provided to you on your specific request and any inf
 We use cookies to enhance your experience. By continuing to visit this website you agree to our use of cookies.`}
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter className="items-center justify-center items-center">
+          <AlertDialogFooter className="items-center justify-center ">
             <AlertDialogAction
               onClick={() => {
                 if (selection) {
