@@ -17,9 +17,9 @@ const MainAlert = () => {
       <AlertDialog open={isopen}>
         <AlertDialogContent className="bg-white">
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>Disclaimer</AlertDialogTitle>
             <AlertDialogDescription>
-              <h3 className="mb-5">{`Disclaimer
+              <h3 className="mb-5">{`
 
 The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website (www.manuadvocates.com), you acknowledge and confirm that you are seeking information relating to Manu Advocates on your own accord and that there has been no form of solicitation, advertisement or inducement by Manu Advocates or its members.`}</h3>
               {`
@@ -35,6 +35,7 @@ Proceed to Website`}
               onClick={() => {
                 setopen(false);
               }}
+              className="bg-amber-400"
             >
               Continue
             </AlertDialogAction>
