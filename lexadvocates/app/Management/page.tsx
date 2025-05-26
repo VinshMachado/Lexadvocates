@@ -136,6 +136,7 @@ const page = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
+        style={{ transformOrigin: "top center" }}
         transition={{
           duration: 0.8,
           scale: { visualDuration: 0.4, bounce: 0.5 },
