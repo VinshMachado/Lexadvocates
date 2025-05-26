@@ -17,7 +17,7 @@ const MainAlert = () => {
       <AlertDialog open={isopen}>
         <AlertDialogContent className="bg-white">
           <AlertDialogHeader>
-            <AlertDialogTitle>Disclaimer</AlertDialogTitle>
+            <AlertDialogTitle>{"Disclaimer"}</AlertDialogTitle>
             <AlertDialogDescription>
               <h3 className="mb-5">{`
 
