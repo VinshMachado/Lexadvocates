@@ -4,7 +4,7 @@ const MissionVision = () => {
   return (
     <section className="max-w-5xl mx-auto p-6 sm:p-1 sm:mt-7 space-y-10">
       {/* Mission */}
-      <div>
+      <div id="mission">
         <h2 className="text-3xl font-bold mb-4 text-amber-600">Our Mission</h2>
         <p className="text-gray-700 mb-4">
           At <strong>RONEL LEX ADVOCATES AND CONSULTANTS</strong>, our mission
@@ -40,7 +40,7 @@ const MissionVision = () => {
       </div>
 
       {/* Vision */}
-      <div>
+      <div id="vision">
         <h2 className="text-3xl font-bold mb-4 text-amber-600">Our Vision</h2>
         <p className="text-gray-700 mb-4">
           At <strong>RONEL LEX ADVOCATES AND CONSULTANTS</strong>, our vision is

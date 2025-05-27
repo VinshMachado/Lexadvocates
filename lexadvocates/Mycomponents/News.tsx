@@ -41,11 +41,14 @@ const News: React.FC = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div>Loading news...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <div id="NEWS">Loading news...</div>;
+  if (error) return <div id="NEWS">Error: {error}</div>;
 
   return (
-    <div className="news-feed w-full   p-4 flex flex-col justify-center items-center">
+    <div
+      id="NEWS"
+      className="news-feed w-full   p-4 flex flex-col justify-center items-center"
+    >
       <h2 className="sm:text-3xl text-xl font-bold mb-4 ">
         Latest Legal Updates in India
       </h2>

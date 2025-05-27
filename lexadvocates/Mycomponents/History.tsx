@@ -10,7 +10,10 @@ import Image from "next/image";
 
 const History = () => {
   return (
-    <div className="sm:m-10 mt-20 m-4 max-w-6xl mx-auto flex flex-col justify-center items-center  w-full">
+    <div
+      id="History"
+      className="sm:m-10 mt-20 m-4 max-w-6xl mx-auto flex flex-col justify-center items-center  w-full"
+    >
       <h2 className="mt-10 text-3xl font-bold tracking-tight border-b pb-3 text-gray-800">
         Our History
       </h2>
@@ -91,7 +94,10 @@ const History = () => {
 
 const Accord = () => {
   return (
-    <div className="w-[96%]  mt-20 mx-auto p-4 sm:p-8 bg-white rounded-2xl shadow-md border border-gray-200">
+    <div
+      id="legalapproach"
+      className="w-[96%]  mt-20 mx-auto p-4 sm:p-8 bg-white rounded-2xl shadow-md border border-gray-200"
+    >
       <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center">
         Our Legal Approach
       </h2>

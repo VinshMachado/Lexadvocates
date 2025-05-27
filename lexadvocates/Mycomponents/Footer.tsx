@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+        <div className="grid grid-cols-3 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
           <div>
             <p className="font-semibold tracking-wide text-gray-800">
               Category
@@ -43,7 +43,7 @@ const Footer = () => {
             <ul className="mt-2 space-y-2">
               <li>
                 <Link
-                  href="/"
+                  href="/#NEWS"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   News
@@ -51,26 +51,26 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/About/#About"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  World
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/About/#History"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Games
+                  History
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/About/#legalapproach"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  References
+                  Legal Approach
                 </Link>
               </li>
             </ul>
@@ -82,124 +82,55 @@ const Footer = () => {
             <ul className="mt-2 space-y-2">
               <li>
                 <Link
-                  href="/"
+                  href="/Contact"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Web
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/Services"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  eCommerce
+                  Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/Management"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Business
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Entertainment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Portfolio
+                  Our Team
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <p className="font-semibold tracking-wide text-gray-800">Apples</p>
+            <p className="font-semibold tracking-wide text-gray-800">about</p>
             <ul className="mt-2 space-y-2">
               <li>
                 <Link
-                  href="/"
+                  href="/About/#mission"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Media
+                  Mission
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/About/#vision"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Brochure
+                  Vision
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/chatbot"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Nonprofit
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Educational
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Projects
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">Cherry</p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Infopreneur
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Personal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Wiki
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Forum
+                  Ai chat
                 </Link>
               </li>
             </ul>
@@ -207,9 +138,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
-        <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
-        </p>
+        <p className="text-sm text-gray-600">Ronel Lex Advocates</p>
         <div className="flex items-center mt-4 space-x-4 sm:mt-0">
           <Link
             href="/"
