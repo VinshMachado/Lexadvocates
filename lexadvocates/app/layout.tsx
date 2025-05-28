@@ -5,7 +5,6 @@ import "./globals.css";
 import Footer from "../Mycomponents/Footer";
 import Navbar from "@/Mycomponents/Navbar";
 import MainAlert from "@/Mycomponents/MainAlert";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
