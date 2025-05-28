@@ -6,6 +6,11 @@ import { GoogleGenAI } from "@google/genai";
 
 export default function Page() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [api, setapikey] = useState("");
+  useEffect(() => {
+    setapikey(`${process.env.NEXT_PUBLIC_GEMINAI}`);
+    console.log(`${process.env.NEXT_PUBLIC_GEMINAI}`);
+  }, []);
 
   //display message thing
 
@@ -16,7 +21,7 @@ export default function Page() {
   const [input, setInput] = useState("");
 
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyBeYic6woIwoWFo4M4xbkJnkZub_QKcY5s",
+    apiKey: api,
   });
   async function SendAi() {
     console.log();
