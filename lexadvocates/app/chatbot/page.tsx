@@ -21,7 +21,7 @@ export default function Page() {
   const [input, setInput] = useState("");
 
   const ai = new GoogleGenAI({
-    apiKey: api,
+    apiKey: `${api}`,
   });
   async function SendAi() {
     console.log();

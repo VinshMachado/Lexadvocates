@@ -14,7 +14,7 @@ const Maps = () => {
               className="w-[97%] h-[80%] sm:h-[600px]  rounded-md "
               loading="lazy"
             ></iframe>
-            <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center ">
+            <h2 className="text-3xl mt-4 font-semibold mb-6 text-gray-800 text-center ">
               Bengaluru
             </h2>
           </div>
