@@ -14,50 +14,49 @@ const Navbar = () => {
   return (
     <div className="w-full h-24 flex justify-end items-center px-4">
       <div className="w-full flex justify-end items-center ">
-        <DropdownMenu>
-          <DropdownMenuTrigger className="mx-2 text-base focus:outline-none sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400">
-            About
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-white">
-            <Link href="/About">
-              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-                About Us
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/Management">
-              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-                Our Team
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/Features">
-              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-                Features and updates
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/KnowledgeHub">
-              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-                Knowledge Hub
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/career">
-              <DropdownMenuItem className="hover:font-bold hover:text-amber-400">
-                Career
-              </DropdownMenuItem>
-            </Link>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Link
+          href="/About"
+          className="mx-2 ml-8 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+        >
+          About
+        </Link>
 
         <Link
           href="/chatbot"
-          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          className="mx-2 ml-8 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
-          Chat With AI
+          Live chat
         </Link>
         <Link
-          href="/Services"
-          className="mx-2 text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+          href="/Management"
+          className="mx-2 ml-8  text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
         >
-          Services
+          Our Team
+        </Link>
+        <Link
+          href="/KnowledgeHub"
+          className="mx-2 ml-8  text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+        >
+          Knowledge
+        </Link>
+
+        <Link
+          href="/Services"
+          className="mx-2 ml-8  text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+        >
+          Pratical Areas
+        </Link>
+        <Link
+          href="/Features"
+          className="mx-2 ml-8  text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+        >
+          Features
+        </Link>
+        <Link
+          href="/career"
+          className="mx-2 ml-8  text-base sm:text-2xl font-semibold poppins-light hover:text-amber-400 hover:border-b-2 border-amber-400"
+        >
+          Career
         </Link>
 
         <div className="ml-4">

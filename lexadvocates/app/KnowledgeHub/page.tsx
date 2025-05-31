@@ -20,6 +20,15 @@ const page = () => {
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-amber-500">
         Knowledge Hub
       </h1>
+      <div className="w-full h-[600px] relative flex justify-center items-center ">
+        <Image
+          src="/Preamble.png"
+          alt="preamble"
+          fill
+          className="object-contain"
+        />
+      </div>
+
       <p className="text-center max-w-3xl mx-auto text-muted-foreground poppins-regular">
         At RONEL LEX ADVOCATES AND CONSULTANTS, we believe in the importance of
         continuous education and knowledge sharing. Our Knowledge Hub is

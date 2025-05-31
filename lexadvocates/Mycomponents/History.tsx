@@ -7,12 +7,14 @@ import {
 } from "@/components/ui/accordion";
 import MissionVision from "./MissionVision";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const History = () => {
   return (
     <div
       id="History"
-      className="sm:m-10 mt-20 m-4 max-w-6xl mx-auto flex flex-col justify-center items-center  w-full"
+      className="md:m-10  mt-20 m-4 max-w-6xl mx-auto flex flex-col justify-center items-center  w-full"
     >
       <h2 className="mt-10 text-3xl font-bold tracking-tight border-b pb-3 text-gray-800">
         Our History
@@ -84,7 +86,7 @@ const History = () => {
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-2">
         {Accord()}
         <MissionVision />
       </div>

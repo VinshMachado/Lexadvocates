@@ -6,22 +6,6 @@ import { motion } from "framer-motion";
 const page = () => {
   const Data = [
     {
-      title: "Client Portal",
-      image: "/Icons/client.png",
-      content1:
-        "Our secure and encrypted client portal provides you with 24/7 access to your legal documents, case updates, and direct communication with your legal team.",
-      content2:
-        "This feature ensures confidentiality and easy access to important information, allowing clients to stay informed about their cases in real-time, submit documents, and communicate securely with their attorneys, all from one centralized location.",
-    },
-    {
-      title: "AI-Powered Legal Search",
-      image: "/Icons/ai.png",
-      content1:
-        "Our website integrates an advanced AI-powered legal search tool that enables users to quickly and efficiently search for relevant laws, regulations, and case studies.",
-      content2:
-        "This cutting-edge technology streamlines the research process, providing clients and legal professionals with instant access to pertinent legal information, thereby enhancing understanding and decision-making.",
-    },
-    {
       title: " Appointment Scheduling",
       image: "/Icons/schedule.png",
       content1:
@@ -45,20 +29,11 @@ const page = () => {
       content2:
         "This adaptability allows clients to access our services anytime, anywhere, enhancing user experience and convenience. A mobile-friendly design also supports better engagement with clients who prefer to use their devices for legal consultations and information.",
     },
-
-    {
-      title: "SEO Optimization",
-      image: "/Icons/seo.png",
-      content1:
-        "We employ comprehensive SEO optimization strategies to ensure our website ranks prominently on search engines.",
-      content2:
-        "By focusing on keywords such as legal amendments, law firms, and criminal law, we enhance our visibility, making it easier for potential clients to find us online. This not only drives traffic to our site but also establishes our authority and credibility in the legal field.",
-    },
   ];
   return (
     <>
       <motion.div
-        className="w-full h-auto"
+        className="w-full flex flex-col justify-center items-center h-auto"
         style={{ transformOrigin: "top center" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

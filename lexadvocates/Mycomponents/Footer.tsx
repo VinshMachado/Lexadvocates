@@ -23,7 +23,7 @@ const Footer = () => {
           </Link>
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              &quot;Lex Advocates and Consultants – Pioneers in legal
+              &quot; Ronel Lex Advocates and Consultants – Pioneers in legal
               innovation,
               <br />
               justice, and advocacy&quot;

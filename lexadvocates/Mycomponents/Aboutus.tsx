@@ -18,7 +18,7 @@ export const Aboutus = () => {
     <>
       <div
         id="About"
-        className="  sm:h-[600px] sm:mt-20 md:mt-7 h-[800px] flex justify-center items-center flex-col"
+        className=" sm:h-[600px] sm:mt-20 md:mt-20 h-[800px] flex justify-center items-center flex-col"
       >
         {" "}
         <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
@@ -30,16 +30,16 @@ export const Aboutus = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={controls}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 h-[180px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] relative"
+            className="w-11/12  sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 h-[180px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] relative"
           >
             <Image
-              src={"/court-appointed-lawyer.jpg"}
+              src={"/advlogo.jpg"}
               fill
               alt="about"
-              className="object-center object-cover rounded-xl shadow-2xl"
+              className="  object-contain rounded-xl "
             />
           </motion.div>
-          <div className="p-5 ml-5 sm:text-sm text-xs text-center sm:text-left noticia-text-regular w-[700px] h-[400px] ">
+          <div className="p-5 ml-5 sm:text-[17px] text-[12px] text-center sm:text-left noticia-text-regular w-[700px] h-[470px] ">
             {" "}
             <p className="poppins-bold sm:mt-5 mt-2  flex justify-center items-center border-b-2 mb-1 ">
               Welcome to Ronel Lex Advocates and Consultants

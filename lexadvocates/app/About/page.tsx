@@ -7,7 +7,9 @@ const page = () => {
     <>
       {" "}
       <Aboutus />
-      <History />
+      <div className="w-full flex felx-col justify-center items-center">
+        <History />
+      </div>
     </>
   );
 };
