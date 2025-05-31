@@ -1,7 +1,7 @@
 "use client";
 import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import { MessageCircle, MessageSquare, MessageCircleMore } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 export default function page() {
   return (
     <motion.div
