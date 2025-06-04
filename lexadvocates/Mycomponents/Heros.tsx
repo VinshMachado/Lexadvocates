@@ -19,7 +19,7 @@ const Heros = () => {
           alt="main banner"
           fill
           src="/StockCake-Lady Justice Statue_174733083844.png"
-          className="object-cover object-top-left"
+          className="object-cover shadow  shadow-2xs object-top-left"
         />
       </motion.div>
 
