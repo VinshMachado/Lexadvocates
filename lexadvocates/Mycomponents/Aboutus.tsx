@@ -18,7 +18,7 @@ export const Aboutus = () => {
     <>
       <div
         id="About"
-        className=" sm:h-[600px] sm:mt-20 md:mt-20 h-[800px] flex justify-center items-center flex-col"
+        className=" sm:h-[600px] sm:mt-20 md:mt-20 h-[800px] w-full flex justify-center items-center flex-col"
       >
         {" "}
         <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
@@ -39,7 +39,7 @@ export const Aboutus = () => {
               className="  object-contain rounded-xl "
             />
           </motion.div>
-          <div className="p-5 ml-5 sm:text-[17px] text-[12px] text-center sm:text-left noticia-text-regular w-[700px] h-[470px] ">
+          <div className="p-5 ml-5 sm:text-[17px] text-[12px] text-center sm:text-left noticia-text-regular  w-full md:w-[700px]  h-[470px] ">
             {" "}
             <p className="poppins-bold sm:mt-5 mt-2  flex justify-center items-center border-b-2 mb-1 ">
               Welcome to Ronel Lex Advocates and Consultants

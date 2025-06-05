@@ -31,7 +31,7 @@ const page = () => {
     },
   ];
   return (
-    <>
+    <div className="w-full h-auto">
       <motion.div
         className="w-full flex flex-col justify-center items-center h-auto"
         style={{ transformOrigin: "top center" }}
@@ -60,7 +60,7 @@ const page = () => {
           })}
         </div>
       </motion.div>
-    </>
+    </div>
   );
 };
 

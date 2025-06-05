@@ -132,43 +132,41 @@ const page = () => {
   ];
 
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        style={{ transformOrigin: "top center" }}
-        transition={{
-          duration: 0.8,
-          scale: { visualDuration: 0.4, bounce: 0.5 },
-        }}
-        className="w-full h-auto flex  flex-wrap justify-center items-center"
-      >
-        <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
-          Meet Our Team
-        </h1>
-        {data.map((item, index) => {
-          return (
-            <Teamcard
-              key={index}
-              name={item.name}
-              qualifications={item.qualifications}
-              specialization={item.specializations}
-              designation={item.designation}
-            />
-          );
-        })}
-        <StaffCard
-          name="Roshan R."
-          designation="H.R and Accountant"
-          qualifications="M.Com."
-        />
-        <StaffCard
-          name="Rishal D’Souza"
-          designation="Paralegal"
-          qualifications="B.B.A.(Law), LL.B."
-        />
-      </motion.div>
-    </>
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      style={{ transformOrigin: "top center" }}
+      transition={{
+        duration: 0.8,
+        scale: { visualDuration: 0.4, bounce: 0.5 },
+      }}
+      className="w-full h-auto flex  flex-wrap justify-center items-center"
+    >
+      <h1 className="text-5xl mb-3 text-amber-400 text-shadow-gray-100  poppins-medium w-full flex justify-center items-center ">
+        Meet Our Team
+      </h1>
+      {data.map((item, index) => {
+        return (
+          <Teamcard
+            key={index}
+            name={item.name}
+            qualifications={item.qualifications}
+            specialization={item.specializations}
+            designation={item.designation}
+          />
+        );
+      })}
+      <StaffCard
+        name="Roshan R."
+        designation="H.R and Accountant"
+        qualifications="M.Com."
+      />
+      <StaffCard
+        name="Rishal D’Souza"
+        designation="Paralegal"
+        qualifications="B.B.A.(Law), LL.B."
+      />
+    </motion.div>
   );
 };
 

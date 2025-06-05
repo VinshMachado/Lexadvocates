@@ -1,4 +1,13 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {
+  BookOpenCheck,
+  Calendar,
+  Home,
+  Inbox,
+  Scale,
+  Settings,
+  SquareLibrary,
+  UserRoundSearch,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -15,36 +24,51 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "#",
+    title: "About",
+    url: "/About",
     icon: Inbox,
   },
   {
-    title: "Calendar",
-    url: "#",
+    title: "Career",
+    url: "/career",
     icon: Calendar,
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "Contact",
+    url: "/Contact",
+    icon: UserRoundSearch,
   },
   {
-    title: "Settings",
-    url: "#",
+    title: "Features",
+    url: "/Features",
     icon: Settings,
+  },
+  {
+    title: "KnowledgeHub",
+    url: "/KnowledgeHub",
+    icon: SquareLibrary,
+  },
+  {
+    title: "Our Team",
+    url: "/Management",
+    icon: Scale,
+  },
+  {
+    title: "Our Services",
+    url: "/Services",
+    icon: BookOpenCheck,
   },
 ];
 
 export function AppSidebar() {
   return (
-    <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
+    <Sidebar className="bg-white">
+      <SidebarContent className="bg-white">
+        <SidebarGroup className="mt-10">
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
