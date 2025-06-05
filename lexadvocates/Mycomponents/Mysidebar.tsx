@@ -69,7 +69,7 @@ export function AppSidebar() {
     <Sidebar className="bg-white">
       <SidebarContent className="bg-white">
         <SidebarGroup className="mt-10">
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Ronel Lex Advocates</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
