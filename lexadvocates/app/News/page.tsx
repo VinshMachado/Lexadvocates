@@ -15,7 +15,7 @@ interface FeedResponse {
   message?: string;
 }
 
-const page = () => {
+const Page = () => {
   const [items, setItems] = useState<FeedItem[]>([]);
   const [items2, setItems2] = useState<FeedItem[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -144,4 +144,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
