@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-const mailer = require("nodemailer");
+import { createTransport, getTestMessageUrl } from "nodemailer";
 
 // Create a transporter for SMTP
-const transporter = mailer.createTransport({
+const transporter = createTransport({
   host: "smtp.gmail.com",
   port: 587,
   secure: false,
@@ -45,7 +45,7 @@ export async function POST(req: Request) {
     });
 
     console.log("Message sent: %s", info.messageId);
-    console.log("Preview URL: %s", mailer.getTestMessageUrl(info));
+    console.log("Preview URL: %s", getTestMessageUrl(info));
 
     return NextResponse.json({
       success: true,
