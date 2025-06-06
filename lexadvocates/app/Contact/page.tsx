@@ -2,7 +2,33 @@
 import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { useState } from "react";
 export default function page() {
+  const [gmail, setgmail] = useState<String>();
+  const [message, setmessage] = useState<String>();
+  const [name, setname] = useState<String>();
+  const [phone, setphone] = useState<Number>();
+
+  const sendData = async () => {
+    await fetch("/api/mailer", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        gmail: gmail,
+        number: phone,
+        message: message,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((data: any) => {
+        console.log(data);
+      });
+  };
+
   return (
     <motion.div
       style={{ transformOrigin: "top center" }}
@@ -94,6 +120,9 @@ export default function page() {
                   placeholder="Enter your name"
                   pattern="[0-9]{10}"
                   className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  onChange={(e: any) => {
+                    setname(e.target.value);
+                  }}
                 />
               </tr>
               <tr className="mb-4 align-top">
@@ -107,6 +136,23 @@ export default function page() {
                   pattern="[0-9]{10}"
                   maxLength={10}
                   className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  onChange={(e: any) => {
+                    setphone(e.target.value);
+                  }}
+                />
+              </tr>
+              <tr className="mb-4 align-top">
+                <label htmlFor="name" className="w-24 text-right font-medium">
+                  Gmail
+                </label>
+                <input
+                  id="phone"
+                  type="email"
+                  placeholder="Enter your gmail"
+                  className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  onChange={(e: any) => {
+                    setgmail(e.target.value);
+                  }}
                 />
               </tr>
               <tr className="mb-4 align-top">
@@ -117,6 +163,9 @@ export default function page() {
                   id="description"
                   placeholder="Enter your message"
                   className="w-full border border-black rounded-xl p-2 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  onChange={(e: any) => {
+                    setmessage(e.target.value);
+                  }}
                 />
               </tr>
 
@@ -126,6 +175,9 @@ export default function page() {
                   <button
                     type="submit"
                     className="px-6 py-2 rounded-xl bg-amber-400 text-white font-semibold hover:bg-amber-500 transition"
+                    onClick={() => {
+                      sendData();
+                    }}
                   >
                     Submit
                   </button>

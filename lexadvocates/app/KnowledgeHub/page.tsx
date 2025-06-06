@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <div className="w-full h-auto flex justify-center items-center">
+    <div className="w-full  h-auto flex justify-center items-center">
       <motion.div
-        className="p-6 sm:p-10 space-y-10"
+        className="w-full p-6 sm:p-10 space-y-10"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -21,7 +21,8 @@ const page = () => {
         <h1 className="text-3xl sm:text-4xl font-bold text-center text-amber-500">
           Knowledge Hub
         </h1>
-        <div className="w-full h-[600px] relative flex justify-center items-center ">
+
+        <div className="w-full h-[600px] relative flex justify-center items-center">
           <Image
             src="/Preamble.png"
             alt="preamble"
@@ -38,29 +39,28 @@ const page = () => {
         </p>
 
         <Tabs defaultValue="blog" className="w-full">
-          <TabsList className=" flex justify-center items-center w-full flex-wrap h-20">
+          <TabsList className="flex justify-center items-center w-full flex-wrap h-20">
             <TabsTrigger
               value="blog"
               className="bg-amber-400 text-black m-2 h-10"
             >
               Legal Blog
             </TabsTrigger>
-
             <TabsTrigger
               value="reports"
-              className="bg-amber-400 text-black  m-2 h-10"
+              className="bg-amber-400 text-black m-2 h-10"
             >
               Law Reports
             </TabsTrigger>
             <TabsTrigger
               value="videos"
-              className="bg-amber-400 text-black  m-2 h-10"
+              className="bg-amber-400 text-black m-2 h-10"
             >
               Videos & Webinars
             </TabsTrigger>
             <TabsTrigger
               value="downloads"
-              className="bg-amber-400 text-black  m-2 h-10"
+              className="bg-amber-400 text-black m-2 h-10"
             >
               Downloads
             </TabsTrigger>
@@ -68,7 +68,7 @@ const page = () => {
 
           <TabsContent value="blog" className="mt-20 sm:mt-0">
             <Card>
-              <CardContent className="space-y-4 p-6 ">
+              <CardContent className="space-y-4 p-6">
                 <h2 className="text-xl font-semibold">
                   Stay Informed with Our Legal Blog
                 </h2>
@@ -130,7 +130,7 @@ const page = () => {
                 <h2 className="text-xl font-semibold">
                   Engaging Educational Content
                 </h2>
-                <div className="flex justify-center items-center flex-wrap w-full ">
+                <div className="flex justify-center items-center flex-wrap w-full">
                   <Image
                     src="/Icons/content.png"
                     alt="Cyber Law"

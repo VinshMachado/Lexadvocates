@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <SidebarProvider open={false}>
           <AppSidebar />
-          <main>
+          <main className="w-full">
             <MainAlert />
             <Navbar />
 

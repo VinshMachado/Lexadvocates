@@ -82,7 +82,7 @@ export default function Page() {
       }}
       id="BOT"
     >
-      <div className=" w-full m-5 sm:w-[75%] mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white">
+      <div className=" w-full m-5 sm:w-[65%] mx-auto border shadow-md rounded-xl h-[600px] flex flex-col overflow-hidden bg-white">
         {/* Header */}
         <div className="bg-white border-b px-4 py-3 font-semibold text-gray-700">
           AI Chat

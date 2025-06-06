@@ -73,11 +73,11 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.title} className="m-3">
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span className="text-xl">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
