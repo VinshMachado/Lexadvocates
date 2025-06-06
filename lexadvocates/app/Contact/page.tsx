@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Mail, Phone } from "lucide-react";
-import { motion, number } from "framer-motion";
+import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 export default function Page() {
