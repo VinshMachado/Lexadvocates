@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
-export default function page() {
+export default function Page() {
   const [gmail, setgmail] = useState<String>();
   const [message, setmessage] = useState<String>();
   const [name, setname] = useState<String>();
