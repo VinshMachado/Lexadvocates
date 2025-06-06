@@ -13,10 +13,10 @@ const transporter = createTransport({
 });
 
 interface requestinput {
-  name: String;
-  gmail: String;
-  number: Number;
-  message: String;
+  name: string;
+  gmail: string;
+  number: number;
+  message: string;
 }
 
 export async function POST(req: Request) {

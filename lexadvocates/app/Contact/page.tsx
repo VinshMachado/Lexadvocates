@@ -1,6 +1,7 @@
 "use client";
+import React from "react";
 import { Mail, Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, number } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 export default function Page() {
@@ -118,7 +119,7 @@ export default function Page() {
                   placeholder="Enter your name"
                   pattern="[0-9]{10}"
                   className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  onChange={(e: any) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setname(e.target.value);
                   }}
                 />
@@ -134,8 +135,8 @@ export default function Page() {
                   pattern="[0-9]{10}"
                   maxLength={10}
                   className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  onChange={(e: any) => {
-                    setphone(e.target.value);
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    setphone(Number(e.target.value));
                   }}
                 />
               </tr>
@@ -148,7 +149,7 @@ export default function Page() {
                   type="email"
                   placeholder="Enter your gmail"
                   className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  onChange={(e: any) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setgmail(e.target.value);
                   }}
                 />
@@ -161,7 +162,7 @@ export default function Page() {
                   id="description"
                   placeholder="Enter your message"
                   className="w-full border border-black rounded-xl p-2 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  onChange={(e: any) => {
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
                     setmessage(e.target.value);
                   }}
                 />
