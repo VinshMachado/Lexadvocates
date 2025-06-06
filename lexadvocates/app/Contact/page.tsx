@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 export default function Page() {
-  const [gmail, setgmail] = useState<String>();
-  const [message, setmessage] = useState<String>();
-  const [name, setname] = useState<String>();
-  const [phone, setphone] = useState<Number>();
+  const [gmail, setgmail] = useState<string>();
+  const [message, setmessage] = useState<string>();
+  const [name, setname] = useState<string>();
+  const [phone, setphone] = useState<number>();
 
   const sendData = async () => {
     await fetch("/api/mailer", {
