@@ -115,8 +115,6 @@ export default function Page() {
                   Name
                 </label>
                 <input
-                  id="phone"
-                  type="tel"
                   placeholder="Enter your name"
                   pattern="[0-9]{10}"
                   className="w-full border border-black rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
