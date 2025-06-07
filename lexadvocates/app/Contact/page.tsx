@@ -4,27 +4,42 @@ import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+
 export default function Page() {
-  const [gmail, setgmail] = useState<string>();
-  const [message, setmessage] = useState<string>();
-  const [name, setname] = useState<string>();
-  const [phone, setphone] = useState<number>();
+  const [gmail, setgmail] = useState<string>("");
+  const [message, setmessage] = useState<string>("");
+  const [name, setname] = useState<string>("");
+  const [phone, setphone] = useState<number>(0);
+  const [alertopen, setalertopen] = useState<boolean>(false);
 
   const sendData = async () => {
-    await fetch("/api/mailer", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        gmail: gmail,
-        number: phone,
-        message: message,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    if (gmail !== "" && gmail !== "message" && name !== "" && phone != 0) {
+      await fetch("/api/mailer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          gmail: gmail,
+          number: phone,
+          message: message,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    } else {
+      alert("fill all the details");
+    }
   };
 
   return (
@@ -173,11 +188,42 @@ export default function Page() {
                     className="px-6 py-2 rounded-xl bg-amber-400 text-white font-semibold hover:bg-amber-500 transition"
                     onClick={() => {
                       sendData();
+                      if (
+                        gmail !== "" &&
+                        gmail !== "message" &&
+                        name !== "" &&
+                        phone != 0
+                      )
+                        setalertopen(true);
                     }}
                   >
                     Submit
                   </button>
                 </td>
+                <AlertDialog open={alertopen}>
+                  <AlertDialogContent className="bg-white">
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>
+                        Are you absolutely sure?
+                      </AlertDialogTitle>
+                      <AlertDialogDescription>
+                        This action cannot be undone. This will permanently
+                        delete your account and remove your data from our
+                        servers.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogAction
+                        className="bg-amber-400"
+                        onClick={() => {
+                          setalertopen(false);
+                        }}
+                      >
+                        Continue
+                      </AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
               </tr>
             </tbody>
           </table>
