@@ -463,9 +463,11 @@ function SidebarMenu({ className, ...props }: React.ComponentProps<"ul">) {
 }
 
 function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
+  const { toggleSidebar } = useSidebar();
   return (
     <li
       data-slot="sidebar-menu-item"
+      onClick={toggleSidebar}
       data-sidebar="menu-item"
       className={cn("group/menu-item relative", className)}
       {...props}
