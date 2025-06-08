@@ -19,6 +19,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 // Menu items.
 const items = [
@@ -69,16 +70,18 @@ export function AppSidebar() {
     <Sidebar className="bg-white">
       <SidebarContent className="bg-white">
         <SidebarGroup className="mt-10">
-          <SidebarGroupLabel>Ronel Lex Advocates</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-2xl text-amber-400">
+            Ronel Lex Advocates
+          </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="mt-5">
               {items.map((item) => (
-                <SidebarMenuItem key={item.title} className="m-3">
+                <SidebarMenuItem key={item.title} className="m-3 ml-5">
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span className="text-xl">{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

@@ -203,13 +203,10 @@ export default function Page() {
                 <AlertDialog open={alertopen}>
                   <AlertDialogContent className="bg-white">
                     <AlertDialogHeader>
-                      <AlertDialogTitle>
-                        Are you absolutely sure?
-                      </AlertDialogTitle>
+                      <AlertDialogTitle>Request sent</AlertDialogTitle>
                       <AlertDialogDescription>
-                        This action cannot be undone. This will permanently
-                        delete your account and remove your data from our
-                        servers.
+                        Your request has been sent to our team.We will contact
+                        you shortly
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
