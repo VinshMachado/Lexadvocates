@@ -3,66 +3,100 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { GoogleGenAI } from "@google/genai";
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+
+// Type for messages
+type Message = {
+  sender: "bot" | "user";
+  text: string;
+};
+
+// Zustand store with persistence
+const useMessageStore = create(
+  persist<{
+    messages: Message[];
+    addMessage: (msg: Message) => void;
+    clearMessages: () => void;
+  }>(
+    (set) => ({
+      messages: [
+        { sender: "bot", text: "Welcome to Ronel Lex advocates & consultants" },
+      ],
+      addMessage: (msg) =>
+        set((state) => ({ messages: [...state.messages, msg] })),
+      clearMessages: () =>
+        set({
+          messages: [
+            {
+              sender: "bot",
+              text: "Welcome to Ronel Lex advocates & consultants",
+            },
+          ],
+        }),
+    }),
+    {
+      name: "ronel-messages", // localStorage key
+    }
+  )
+);
 
 export default function Page() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [api, setapikey] = useState("");
-  useEffect(() => {
-    setapikey(`${process.env.NEXT_PUBLIC_GEMINAI}`);
-    console.log(`${process.env.NEXT_PUBLIC_GEMINAI}`);
-  }, []);
-
-  //display message thing
-
-  const [messages, setMessages] = useState([
-    { sender: "bot", text: "Welcome to Ronel Lex advocates & consultants" },
-  ]);
-  // users input thing
   const [input, setInput] = useState("");
 
-  const ai = new GoogleGenAI({
-    apiKey: `${api}`,
-  });
-  async function SendAi() {
-    console.log();
+  const { messages, addMessage } = useMessageStore();
+
+  useEffect(() => {
+    setapikey(`${process.env.NEXT_PUBLIC_GEMINAI}`);
+  }, []);
+
+  const ai = new GoogleGenAI({ apiKey: api });
+
+  const SendAi = async () => {
     const response = await ai.models.generateContent({
       model: "gemini-2.0-flash",
-      contents: `${input}`,
-
+      contents: input,
       config: {
-        systemInstruction:
-          "You are a law consultant working at Ronel lex advocates & consultants and you have to give customers yours openion and law knowledge based on indian constitution. and ya dont give long answers keep small and cute",
+        systemInstruction: `You are a law consultant working at Ronel lex advocates & consultants and you have to give customers yours openion and law knowledge based on indian constitution and remember our serivces are open from  05:30pm to 07:30pm Upon Appointment. and  we are available at 2 locations Mangaluru
+#4-239, Pilikula,
+Nisargadhama Nagara,
+Moodushedde,
+Vamanjoor Post,
+Mangaluru - 575028 and  Bengaluru
+No. 12/69, Jetking Building, First Floor,
+Opp. to MEI Polytechnic,
+59th Cross, 4th Block,
+Rajajinagar,
+Bengaluru - 560 010ya dont give long answers keep small and cute, if anyone greets you just greet back without giving details of our locations `,
       },
     });
-    console.log(response.text);
+
     setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        {
-          sender: "bot",
-          text: `${response.text}`,
-        },
-      ]);
-    }, 600);
-  }
+      addMessage({
+        sender: "bot",
+        text: `${response.text}`,
+      });
+    }, 100);
+  };
 
   const sendMessage = () => {
     const trimmed = input.trim();
     if (!trimmed) return;
 
-    const newMsg = { sender: "user", text: trimmed };
-    setMessages((prev) => [...prev, newMsg]);
+    addMessage({ sender: "user", text: trimmed });
     setInput("");
+    SendAi();
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       sendMessage();
-      SendAi();
     }
   };
 
-  // Auto-resize textarea
   useEffect(() => {
     const textarea = textareaRef.current;
     if (textarea) {
@@ -123,10 +157,7 @@ export default function Page() {
             className="flex-1  resize-none overflow-hidden p-3 text-sm border rounded-xl outline-none focus:ring-2 ring-amber-400 transition-all"
           />
           <button
-            onClick={() => {
-              sendMessage();
-              SendAi();
-            }}
+            onClick={sendMessage}
             className="bg-amber-500 text-white px-4 py-2 text-sm rounded-xl hover:bg-amber-600 transition-colors"
           >
             Send

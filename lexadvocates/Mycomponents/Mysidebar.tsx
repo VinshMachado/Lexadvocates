@@ -3,6 +3,7 @@ import {
   Calendar,
   Home,
   Inbox,
+  Newspaper,
   Scale,
   Settings,
   SquareLibrary,
@@ -62,6 +63,11 @@ const items = [
     title: "Our Services",
     url: "/Services",
     icon: BookOpenCheck,
+  },
+  {
+    title: "News",
+    url: "/News",
+    icon: Newspaper,
   },
 ];
 
