@@ -69,6 +69,11 @@ const items = [
     url: "/News",
     icon: Newspaper,
   },
+  {
+    title: "Live Chat",
+    url: "/chatbot",
+    icon: Newspaper,
+  },
 ];
 
 export function AppSidebar() {
